@@ -7,12 +7,12 @@ export firstday,
        SeriesPairDateFloat64, ArraySeriesPairDateFloat64
 
   # objects to test values
-  const op = readseries(Pkg.dir("Jig/src/quant/data/spx.csv"), value=2)
-  const hi = readseries(Pkg.dir("Jig/src/quant/data/spx.csv"), value=3)
-  const lo = readseries(Pkg.dir("Jig/src/quant/data/spx.csv"), value=4)
-  const cl = readseries(Pkg.dir("Jig/src/quant/data/spx.csv"), value=5)
-  const vm = readseries(Pkg.dir("Jig/src/quant/data/spx.csv"), value=6)
-  const aj = readseries(Pkg.dir("Jig/src/quant/data/spx.csv"), value=7)
+  const op = readseries(Pkg.dir("Jig/src/quant/data/daily_spx_from_1980_to_1981.csv"), value=2)
+  const hi = readseries(Pkg.dir("Jig/src/quant/data/daily_spx_from_1980_to_1981.csv"), value=3)
+  const lo = readseries(Pkg.dir("Jig/src/quant/data/daily_spx_from_1980_to_1981.csv"), value=4)
+  const cl = readseries(Pkg.dir("Jig/src/quant/data/daily_spx_from_1980_to_1981.csv"), value=5)
+  const vm = readseries(Pkg.dir("Jig/src/quant/data/daily_spx_from_1980_to_1981.csv"), value=6)
+  const aj = readseries(Pkg.dir("Jig/src/quant/data/daily_spx_from_1980_to_1981.csv"), value=7)
   
   # const to test structure
   const SeriesPairDateFloat64 = eval(:(SeriesPair{Date{ISOCalendar}, Float64}))
