@@ -6,8 +6,9 @@ export @runtest,
 
 macro runtest(pkg, file...)
   for f in file
-    print_with_color(:magenta, "**  ")
+    print_with_color(:blue, "**  ")
     print_with_color(:blue, string(f))
+    print_with_color(:blue, "  **")
     println("")
     include(Pkg.dir("$pkg/test/$f.jl"))
   end
