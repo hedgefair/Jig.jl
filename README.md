@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/milktrader/Jig.jl.png)](https://travis-ci.org/milktrader/Jig.jl)
+
 Jig.jl
 ======
 
