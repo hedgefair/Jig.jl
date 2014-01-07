@@ -58,14 +58,14 @@ include("bar.jl")
 ````
 
 ~~Jig includes a nested module named `Quant` that provides objects and constants useful to testing packages
-in the JuliaQuant organization. This module must be called specifically to get those objects and constants.
+in the JuliaQuant organization. This module must be called specifically to get those objects and constants.~~
 
 ````julia
 julia> using Jig.Quant, Series
 
 julia> cl |> percentchange |> tail |> head
 1-element Array{SeriesPair{Date{ISOCalendar},Float64},1}:
- 1980-01-04  0.012355065576886993~~
+ 1981-01-04  0.012355065576886993
 ````
 
 A new package named `MarketData` has taken the place of the submodule.
