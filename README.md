@@ -33,7 +33,7 @@ bar:
 ````
 Success is indicated by a green dot, and failure by a red x. In the toy example above, the
 `@context` macro was called first to print a string about what is being tested. The result
-of "foo is foo" is two successful tests. The tests are assertions passed to the `@jtest` macro
+of "foo is foo" is two successful tests. The tests are assertions passed to the `jtest` function 
 inside the `test/foo.jl` file. 
 
 As a clever trick, a file can be placed in the package's test directory named `all.jl` to run all the 
@@ -57,7 +57,7 @@ include("foo.jl")
 include("bar.jl")
 ````
 
-Jig includes a nested module named `Quant` that provides objects and constants useful to testing packages
+~~Jig includes a nested module named `Quant` that provides objects and constants useful to testing packages
 in the JuliaQuant organization. This module must be called specifically to get those objects and constants.
 
 ````julia
@@ -65,5 +65,7 @@ julia> using Jig.Quant, Series
 
 julia> cl |> percentchange |> tail |> head
 1-element Array{SeriesPair{Date{ISOCalendar},Float64},1}:
- 1980-01-04  0.012355065576886993
+ 1980-01-04  0.012355065576886993~~
 ````
+
+A new package named `MarketData` has taken the place of the submodule.
