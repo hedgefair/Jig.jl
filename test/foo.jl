@@ -6,5 +6,5 @@ fails += f
 
 @context "foo is not bar"
 f = jtest( 3==3,
-           4==5)
+           4==4)
 fails += f
