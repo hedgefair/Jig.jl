@@ -1,8 +1,8 @@
 module Jig
 
 export @runtest, 
-       @jtest, 
-       @context
+       @context,
+       jtest 
 
 macro runtest(pkg, file...)
   for f in file
@@ -13,7 +13,13 @@ macro runtest(pkg, file...)
   end
 end
 
-macro jtest(ex...)
+macro context(s)
+  print("      ")
+  print_with_color(:magenta,s)
+  print("  ")
+end
+
+function jtest(ex...)
   for e in ex
     eval(:($e))?
     print_with_color(:green, ".") :
@@ -21,13 +27,5 @@ macro jtest(ex...)
   end
   println("")
 end
-
-macro context(s)
-  print("      ")
-  print_with_color(:magenta,s)
-  print("  ")
-end
-
-include("quant/Quant.jl")
 
 end

@@ -1,14 +1,12 @@
 @context "bar is bar"
-@jtest(
+jtest(
        1==2,
        2==3,
-       3==3
-       )
+       3==3)
 
 @context "bar is not qux"
-@jtest(
+jtest(
        1==1,
        2==2,
-       3==42
-       )
+       3==42)
 

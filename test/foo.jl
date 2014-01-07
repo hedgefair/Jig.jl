@@ -1,10 +1,9 @@
 @context "foo is foo"
-@jtest(
+jtest(
        1==1,
-       2==2,)
+       2==2)
 
 @context "foo is not bar"
-@jtest(
+jtest(
        3==3,
        4==5)
-println("")
