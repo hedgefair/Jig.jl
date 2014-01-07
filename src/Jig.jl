@@ -20,17 +20,14 @@ macro context(s)
 end
 
 function jtest(ex...)
-  exitcode = 0
   for e in ex
     if eval(:($e))
       print_with_color(:green, ".") 
     else
       print_with_color(:red, "x") 
-      exitcode = 1
     end
   end
   println("")
-  exitcode
 end
 
 end
