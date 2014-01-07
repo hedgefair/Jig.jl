@@ -1,9 +1,9 @@
 using Jig
 
-foo = 0
+tally = 0
 include("foo.jl")
-foo += fails
+tally += fails
 include("bar.jl")
-foo += fails
+tally += fails
  
-foo > 0 ? error("There are $foo failing tests in this suite") : nothing
+tally > 0 ? error("There are $tally failing tests in this suite") : nothing
